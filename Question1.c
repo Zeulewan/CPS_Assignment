@@ -30,6 +30,7 @@ int main()
     printf("You have quit the program.");
     else
     printf("You have entered an invalid option.");
+  
 
     return 0;
 }
