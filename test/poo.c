@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main{
+int main(){
     printf ("luca is a poo poo kaka");
 
     return 0;
