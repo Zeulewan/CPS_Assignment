@@ -24,9 +24,11 @@ int main(void){
     double units_ml;            //concentration in units/ml
     double num_hours;           //number of hours for 1 L to be delivered
     
-    value =  ;                  //fill blank
+    //> means fill blank
     
-    while( ){                   //fill blank
+    value = > ;                    //fill blank
+    
+    while( > ){                   //fill blank
     
     switch(value){              //Using the variables decalred within the main() program and the given function prototypes, complete the bodyy of the switch statement
     
@@ -35,7 +37,7 @@ int main(void){
         printf("Wrong input.\n");
     
     }
-    value =  ;                  //fill blank
+    value = > ;                  //fill blank
 }
 
 //function displays menu and gets user's input
