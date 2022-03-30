@@ -35,13 +35,13 @@ int main(void)
         printf("the band nearest the end. Type the colors in lowercase letters only, ");
         printf("NO CAPS.\n\n");
         
-        for(counter = 1; ►; counter++)                  /* (1 mark) */   
+        for(counter = 1; counter<4; counter++)                  /* (1 mark) */   
         {                                   
 
             printf("Band %d => ", counter);
             scanf("%s", target);
         
-            value = search(►, ►, SUB_1);                 /* (0.5 mark) */
+            value = search(/*COLOUR_CODES*/, target, SUB_1);                 /* (0.5 mark) */
 
             /* searches for string*/
             if(value != NOT_FOUND) 
@@ -56,7 +56,7 @@ int main(void)
                         break;
                     case 3
                         if (value>3)
-                            answer+=pow(►);             /* (0.5 mark) */
+                            answer += pow(10, value);             /* (0.5 mark) */
                         else
                             for(i = 0; ►; i++)          /* (0.5 mark) */
                                 answer /= 10;
@@ -66,7 +66,7 @@ int main(void)
                 no_error = 0; /* if string not found*/
         }
 
-    if (►) /* (1 mark) */
+    if (/*colour is valid*/) /* (1 mark) */
         printf("Resistance value: %.3f kilo-ohms\n\n", answer);
     else
         printf("Invalid Color: %s\n\n", target);
@@ -74,13 +74,13 @@ int main(void)
     printf("Do you want to decode another resistor?\n => ");
     scanf("%c%c", &char_left, &reply);
     printf("\n");
-    } while(►); /* (1 mark) */
+    } while(reply == y); /* (1 mark) */
 }
 
 /* function takes as input a list of strings, its size, and a target string. Then, searches the list for the
 target and returns as its value the subscript of the target in the list. It returns -1 if target is not found.
 */
-int search(const char COLOR_CODES[][SUB_2], const char target[], int size)
+int search(const char COLOR_CODES[][SUB_2], const char target[], int size) //Sub_1 = size (guess)
 {
     int i, j; /* counters */
     int length, counter=0;
@@ -100,8 +100,8 @@ int search(const char COLOR_CODES[][SUB_2], const char target[], int size)
     }
     --i;
     if(found)
-        where = ►; /* (1 mark) */
+        where = /*0-9*/; /* (1 mark) */
     else
-        where = ►; /* (1 mark) */
+        where = NOT_FOUND; /* (1 mark) */
     return where;
 }
