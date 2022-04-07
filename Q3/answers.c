@@ -4,7 +4,7 @@
 #include <string.h> 
 #define NOT_FOUND - 1 
 #define SUB_1 10
-#define SUB_2 7
+#define SUB_2 7 q   
 
 int search(const char [][SUB_2],const char s[] , int);
 
@@ -59,7 +59,7 @@ int main(void) {
                     
                 case 3:
                     if(value>3)
-                        answer+=pow(SUB_1,value);
+                        answer*=pow(SUB_1,value-3);
                     else
                     {
                         for (i = 0; i<(3-value); i++)

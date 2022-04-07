@@ -49,16 +49,16 @@ int main(void)
                 switch(counter)
                 {
                     case 1:
-                        answer = value * ►;             /* (0.5 mark) */
+                        answer = value * SUB_1;             /* (0.5 mark) */
                         break;
                     case 2:
                         answer += value;
                         break;
-                    case 3
+                    case 3:
                         if (value>3)
-                            answer += pow(10, value);             /* (0.5 mark) */
+                            answer += pow(10, value-3);             /* (0.5 mark) */
                         else
-                            for(i = 0; ►; i++)          /* (0.5 mark) */
+                            for(i = 0; i<(3-value); i++)          /* (0.5 mark) */
                                 answer /= 10;
                 }
             }
@@ -66,7 +66,7 @@ int main(void)
                 no_error = 0; /* if string not found*/
         }
 
-    if (/*colour is valid*/) /* (1 mark) */
+    if (no_error) /* (1 mark) */
         printf("Resistance value: %.3f kilo-ohms\n\n", answer);
     else
         printf("Invalid Color: %s\n\n", target);
@@ -74,7 +74,7 @@ int main(void)
     printf("Do you want to decode another resistor?\n => ");
     scanf("%c%c", &char_left, &reply);
     printf("\n");
-    } while(reply == y); /* (1 mark) */
+    } while(reply == 'y'); /* (1 mark) */
 }
 
 /* function takes as input a list of strings, its size, and a target string. 
