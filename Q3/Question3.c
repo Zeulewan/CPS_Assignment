@@ -41,7 +41,7 @@ int main(void)
             printf("Band %d => ", counter);
             scanf("%s", target);
         
-            value = search(/*COLOUR_CODES*/, target, SUB_1);                 /* (0.5 mark) */
+            value = search(COLOR_CODES, target, SUB_1);                 /* (0.5 mark) */
 
             /* searches for string*/
             if(value != NOT_FOUND) 
@@ -85,7 +85,7 @@ It returns -1 if target is not found.
 //brief notes function searches 2d array 
 
 
-int search(const char COLOR_CODES[][SUB_2], const char target[], int size) //Sub_1 = size (guess)
+int search(const char COLOR_CODES[][SUB_2], const char target[], int size) //Sub_1 = size
 {
     int i, j; /* counters */
     int length, counter=0;
@@ -93,10 +93,10 @@ int search(const char COLOR_CODES[][SUB_2], const char target[], int size) //Sub
     int where = 0; /* location of target*/
     
     length = strlen(target); /* (1 mark) */
-    for(i=0; ►; i++) /* (1 mark) */
+    for(i=0; i<size; i++) /* (1 mark) */
     { 
         for(j = 0; j < length; j++)
-            if(►== target[j]) /* (1 mark) */
+            if(COLOR_CODES[i][j]== target[j]) /* (1 mark) */
                 counter++;
         if(counter == length)
             found = 1;
@@ -105,7 +105,7 @@ int search(const char COLOR_CODES[][SUB_2], const char target[], int size) //Sub
     }
     --i;
     if(found)
-        where = /*0-9*/; /* (1 mark) */
+        where = i; /* (1 mark) */
     else
         where = NOT_FOUND; /* (1 mark) */
     return where;

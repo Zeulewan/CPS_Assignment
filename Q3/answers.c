@@ -48,7 +48,7 @@ int main(void) {
             {
                 switch (counter) 
                 {
-                    
+//red green blue                      1:20        2:5
                 case 1:
                     answer = value * SUB_1;
                     break;
@@ -59,7 +59,7 @@ int main(void) {
                     
                 case 3:
                     if(value>3)
-                        answer*=pow(SUB_1,value-3);
+                        answer+=pow(SUB_1,value);
                     else
                     {
                         for (i = 0; i<(3-value); i++)
