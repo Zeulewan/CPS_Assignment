@@ -77,9 +77,14 @@ int main(void)
     } while(reply == y); /* (1 mark) */
 }
 
-/* function takes as input a list of strings, its size, and a target string. Then, searches the list for the
-target and returns as its value the subscript of the target in the list. It returns -1 if target is not found.
+/* function takes as input a list of strings, its size, and a target string. 
+Then, searches the list for the
+target and returns as its value the subscript of the target in the list. 
+It returns -1 if target is not found.
 */
+//brief notes function searches 2d array 
+
+
 int search(const char COLOR_CODES[][SUB_2], const char target[], int size) //Sub_1 = size (guess)
 {
     int i, j; /* counters */
@@ -87,7 +92,7 @@ int search(const char COLOR_CODES[][SUB_2], const char target[], int size) //Sub
     int found = 0; /* indicates when string is found*/
     int where = 0; /* location of target*/
     
-    length = strlen(►); /* (1 mark) */
+    length = strlen(target); /* (1 mark) */
     for(i=0; ►; i++) /* (1 mark) */
     { 
         for(j = 0; j < length; j++)
